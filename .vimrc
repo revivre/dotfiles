@@ -9,10 +9,12 @@ set fileencodings=iso-2022-jp,sjis,utf-8
 set backspace=2
 set tabstop=2
 set shiftwidth=4
+set softtabstop=0
 set expandtab
 
 " display
 " ---------------------------------------
+set guifont=Ricty\ Regular:h20
 set list
 set number
 set ruler
@@ -36,7 +38,7 @@ set fileencodings=iso-2022-jp,sjis,euc-jp,utf-8
 " syntax
 " ---------------------------------------
 syntax on
-colorscheme darkbluecommentmod
+colorscheme molokai
 
 " search
 " ---------------------------------------
