@@ -82,6 +82,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias subl='/usr/bin/sublime'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -117,3 +118,18 @@ case $TERM in
 #PATH=$PATH:$JAVA_HOME/bin
 #CLASSPATH=$JAVA_HOME/lib/tools.jar
 #export JAVA_HOME PATH CLASSPATH
+
+export PERL_LOCAL_LIB_ROOT="/home/revivre/perl5";
+export PERL_MB_OPT="--install_base /home/revivre/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/revivre/perl5";
+export PERL5LIB="/home/revivre/perl5/lib/perl5/i686-linux-gnu-thread-multi-64int:/home/revivre/perl5/lib/perl5";
+export PATH="/home/revivre/perl5/bin:$PATH";
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
