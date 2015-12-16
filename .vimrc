@@ -110,7 +110,7 @@ call plug#end()
 " lightline
 " --------------------------------------------
 let g:lightline = {
-      \ 'colorscheme': 'landscape',
+      \ 'colorscheme': 'wombat',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
