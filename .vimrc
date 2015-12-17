@@ -1,5 +1,5 @@
 set nocompatible
-set tags=~/.tags
+"set tags=~/.tags
 "set cmdheight=2
 
 set backspace=2
