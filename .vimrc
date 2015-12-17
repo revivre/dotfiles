@@ -82,6 +82,7 @@ set backup
 set backupdir=~/.vim/backup
 set swapfile
 set directory=~/.vim/swap
+set noundofile
 
 " ファイルタイプ別のプラグイン/インデントを有効にする
 filetype plugin indent on
