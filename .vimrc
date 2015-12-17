@@ -10,7 +10,7 @@ set expandtab
 
 " display
 " ---------------------------------------
-set guifont=Ricty\ Regular:h20
+set guifont=Ricty\ for\ Powerline:h20
 set list
 set number
 set ruler
