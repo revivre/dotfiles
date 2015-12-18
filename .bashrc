@@ -98,6 +98,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# aliases
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -111,22 +112,6 @@ case $TERM in
 esac
 
 cd ~
-# ADDED: Java PATH Setting
-#JAVA_HOME=/usr/lib/jvm/jdk1.6.0_22
-#PATH=$PATH:$JAVA_HOME/bin
-#CLASSPATH=$JAVA_HOME/lib/tools.jar
-#export JAVA_HOME PATH CLASSPATH
-
-export PERL_LOCAL_LIB_ROOT="/home/revivre/perl5";
-export PERL_MB_OPT="--install_base /home/revivre/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/revivre/perl5";
-export PERL5LIB="/home/revivre/perl5/lib/perl5/i686-linux-gnu-thread-multi-64int:/home/revivre/perl5/lib/perl5";
-export PATH="/home/revivre/perl5/bin:$PATH";
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-
-
