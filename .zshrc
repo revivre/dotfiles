@@ -107,4 +107,15 @@ function peco-src () {
     zle clear-screen
 }
 zle -N peco-src
-bindkey '^g' peco-src
+bindkey '^G' peco-src
+
+function gh-open-peco () {
+    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        BUFFER="gh-open ${selected_dir}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N gh-open-peco
+bindkey '^H' gh-open-peco
