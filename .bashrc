@@ -82,7 +82,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias subl='/usr/bin/sublime'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -102,17 +101,16 @@ fi
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias tweetdeck='/opt'/'TweetDeck'/bin/'TweetDeck'
 
 PS1='\!> \[\033[0;34m\]\u\[\033[m\]@\[\033[0;36m\]\h\[\033[m\] [\[\033[0;32m\]\t\[\033[m\] \w]\$ '
 case $TERM in
   kterm|xterm|cygwin)
-      TITLEBAR="\u@\h:\w"
-          PS1="\[\033]0;${TITLEBAR}\007\]${PS1}"
-              ;;
-              esac
+  TITLEBAR="\u@\h:\w"
+  PS1="\[\033]0;${TITLEBAR}\007\]${PS1}"
+  ;;
+esac
 
-              cd ~
+cd ~
 # ADDED: Java PATH Setting
 #JAVA_HOME=/usr/lib/jvm/jdk1.6.0_22
 #PATH=$PATH:$JAVA_HOME/bin
@@ -131,5 +129,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
 
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
