@@ -1,12 +1,5 @@
-set nocompatible
 "set tags=~/.tags
-"set cmdheight=2
 
-set backspace=2
-set tabstop=2
-set shiftwidth=4
-set softtabstop=0
-set expandtab
 
 " display
 " ---------------------------------------
@@ -20,11 +13,12 @@ set showcmd
 set wildmenu
 set linespace=0
 set title
+set cmdheight=2
 
 " colorscheme
 " ---------------------------------------
-
 colorscheme onedark
+
 " encoding
 " ---------------------------------------
 set encoding=utf-8
@@ -55,10 +49,12 @@ set guioptions+=a
 
 " tab
 " ---------------------------------------
+set backspace=2
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
-set shiftwidth=4
 set shiftround
 set wrap
 
