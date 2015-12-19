@@ -94,15 +94,37 @@ endif
 
 call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
+  Plug 'Shougo/neomru.vim'
+  Plug 'Shougo/neoyank.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/vim-plug',
         \ {'dir': '~/.vim/plugged/vim-plug/autoload'}
-let b:commandDepends = ['Unite', 'UniteWithBufferDir',
+  let b:commandDepends = ['Unite', 'UniteWithBufferDir',
       \ 'VimFilerCurrentDir', 'VimFilerBufferDir']
-Plug 'Shougo/unite.vim', {'on': b:commandDepends, 'for': ['unite']}
+  Plug 'Shougo/unite.vim', {'on': b:commandDepends, 'for': ['unite']}
       \ | Plug 'Shougo/vimfiler', {'on': b:commandDepends}
-unlet b:commandDepends
+  unlet b:commandDepends
 call plug#end()
+
+" unite.vim
+"インサートモードで開始
+"let g:unite_enable_start_insert=1
+"ヒストリー/ヤンク機能を有効化
+let g:unite_source_history_yank_enable=1
+" prefix key.
+nnoremap    [unite]   <Nop>
+nmap    <Space>u [unite]
+
+" unite.vim keymap
+nnoremap <silent> [unite]u :<C-u>Unite<Space>file<CR>
+nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
+nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
+nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
+nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
+nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
+nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [unite]c :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 
 " lightline
 " --------------------------------------------
