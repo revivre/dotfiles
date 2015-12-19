@@ -88,7 +88,10 @@ export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
-DEFAULT_USER=revivre
+# aliases
+# git
+alias gs='git status'
+alias gd='git diff'
 
 # rbenv
 eval "$(rbenv init - zsh)"
