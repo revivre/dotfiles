@@ -1,6 +1,3 @@
-"set tags=~/.tags
-
-
 " display
 " ---------------------------------------
 set guifont=Ricty\ for\ Powerline:h20
