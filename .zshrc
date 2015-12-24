@@ -92,6 +92,8 @@ alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"
 # git
 alias gs='git status'
 alias gd='git diff'
+alias gc='git commit -m'
+alias ga='git add'
 
 # rbenv
 eval "$(rbenv init - zsh)"
