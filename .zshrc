@@ -126,6 +126,7 @@ zle -N gh-open-peco
 bindkey '^H' gh-open-peco
 
 # tmux_automatically_attach_session
+export TMUX_SESSION_PATH=$HOME/src/github.com/revivre/dotfiles/.tmux/session 
 function is_exists() { type "$1" >/dev/null 2>&1; return $?; }
 function is_osx() { [[ $OSTYPE == darwin* ]]; }
 function is_screen_running() { [ ! -z "$STY" ]; }
@@ -175,9 +176,9 @@ function tmux_automatically_attach_session()
                 # on OS X force tmux's default command
                 # to spawn a shell in the user's namespace
                 tmux_config=$(cat $HOME/.tmux.conf <(echo 'set-option -g default-command "reattach-to-user-namespace -l $SHELL"'))
-                tmux -f <(echo "$tmux_config") new-session && echo "$(tmux -V) created new session supported OS X"
+                tmux -f <(echo "$tmux_config") new-session \; source-file $TMUX_SESSION_PATH && echo "$(tmux -V) created new session supported OS X"
             else
-                tmux new-session && echo "tmux created new session"
+                tmux new-session \; source-file $TMUX_SESSION_PATH && echo "tmux created new session"
             fi
         fi
     fi

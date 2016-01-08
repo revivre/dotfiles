@@ -1,0 +1,10 @@
+# Vertical split
+split-window -h
+# Horizontal split
+splitw -d
+# Move Right Pane
+select-pane -U
+## Horizontal split
+splitw -d
+# Move Left Pane
+select-pane -L
