@@ -106,6 +106,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-endwise'
 call plug#end()
 
+" vim-ref
+let g:ref_open = 'split'
+let g:ref_refe_cmd = $HOME.'/.rbenv/shims/refe'
+let g:ref_refe_version = 2
+nmap ,rr :<C-U>Ref refe<Space>
+
 " unite.vim
 "インサートモードで開始
 "let g:unite_enable_start_insert=1
