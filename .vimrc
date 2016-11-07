@@ -101,6 +101,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/unite.vim', {'on': b:commandDepends, 'for': ['unite']}
       \ | Plug 'Shougo/vimfiler', {'on': b:commandDepends}
   unlet b:commandDepends
+  Plug 'thinca/vim-ref'
+  Plug 'yuku-t/vim-ref-ri'
+  Plug 'tpope/vim-endwise'
 call plug#end()
 
 " unite.vim
