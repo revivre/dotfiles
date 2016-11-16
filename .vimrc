@@ -77,6 +77,28 @@ set swapfile
 set directory=~/.vim/swap
 set noundofile
 
+" jkを直感的に
+nnoremap <silent> j gj
+nnoremap <silent> gj j
+nnoremap <silent> k gk
+nnoremap <silent> gk k
+nnoremap <silent> $ g$
+nnoremap <silent> g$ $
+vnoremap <silent> j gj
+vnoremap <silent> gj j
+vnoremap <silent> k gk
+vnoremap <silent> gk k
+vnoremap <silent> $ g$
+vnoremap <silent> g$ $
+
+" JとKで半ページ移動
+nnoremap J <C-D>
+nnoremap K <C-U>
+
+" <Space>h or <Space>lで行頭か行末に移動する
+noremap <Space>h  ^
+noremap <Space>l  $
+
 " ファイルタイプ別のプラグイン/インデントを有効にする
 filetype plugin indent on
 
