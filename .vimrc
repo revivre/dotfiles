@@ -141,13 +141,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/neomru.vim'
   Plug 'Shougo/neoyank.vim'
   Plug 'Shougo/neocomplete.vim'
+  Plug 'Shougo/vimfiler.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/vim-plug',
         \ {'dir': '~/.vim/plugged/vim-plug/autoload'}
   let b:commandDepends = ['Unite', 'UniteWithBufferDir',
       \ 'VimFilerCurrentDir', 'VimFilerBufferDir']
   Plug 'Shougo/unite.vim', {'on': b:commandDepends, 'for': ['unite']}
-      \ | Plug 'Shougo/vimfiler', {'on': b:commandDepends}
+      \ | Plug 'Shougo/vimfiler.vim', {'on': b:commandDepends}
   unlet b:commandDepends
   Plug 'thinca/vim-ref'
   Plug 'yuku-t/vim-ref-ri'
@@ -176,6 +177,10 @@ let g:go_hightlight_interfaces = 1
 let g:go_hightlight_operators = 1
 let g:go_hightlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+" vimfiler
+noremap <Space>f :VimFilerCurrentDir -split -simple -winwidth=25 -no-quit<CR>
+let g:vimfiler_as_default_explorer = 1
 
 " neocomplete.vim
 " Disable AutoComplPop.
