@@ -153,6 +153,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'yuku-t/vim-ref-ri'
   Plug 'thinca/vim-quickrun'
   Plug 'tpope/vim-endwise'
+  Plug 'fatih/vim-go'
 call plug#end()
 
 let g:quickrun_config = {
@@ -163,6 +164,18 @@ let g:quickrun_config = {
 \   },
 \}
 autocmd FileType ruby nmap <Space>r <Plug>(quickrun)
+
+" vim-go
+autocmd FileType go nmap <Space>gr <Plug>(go-run)
+autocmd FileType go nmap <Space>gb <Plug>(go-build)
+autocmd FileType go nmap <Space>gt <Plug>(go-test)
+let g:go_hightlight_functions = 1
+let g:go_hightlight_methods = 1
+let g:go_hightlight_structs = 1
+let g:go_hightlight_interfaces = 1
+let g:go_hightlight_operators = 1
+let g:go_hightlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
 
 " neocomplete.vim
 " Disable AutoComplPop.
