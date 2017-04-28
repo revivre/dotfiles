@@ -151,8 +151,18 @@ call plug#begin('~/.vim/plugged')
   unlet b:commandDepends
   Plug 'thinca/vim-ref'
   Plug 'yuku-t/vim-ref-ri'
+  Plug 'thinca/vim-quickrun'
   Plug 'tpope/vim-endwise'
 call plug#end()
+
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter/buffer/split" : ":botright",
+\       "outputter/buffer/into" : 1,
+\       "outputter/buffer/close_on_empty" : 1
+\   },
+\}
+autocmd FileType ruby nmap <Space>r <Plug>(quickrun)
 
 " neocomplete.vim
 " Disable AutoComplPop.
