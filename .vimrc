@@ -155,6 +155,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'thinca/vim-quickrun'
   Plug 'tpope/vim-endwise'
   Plug 'fatih/vim-go'
+  Plug 'AndrewRadev/splitjoin.vim'
 call plug#end()
 
 let g:quickrun_config = {
