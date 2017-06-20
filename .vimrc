@@ -17,6 +17,10 @@ set diffopt=filler,vertical
 " ---------------------------------------
 colorscheme onedark
 
+" help
+" ---------------------------------------
+set helplang=ja
+
 " encoding
 " ---------------------------------------
 set encoding=utf-8
@@ -138,6 +142,7 @@ if has('vim_starting')
 endif
 
 call plug#begin('~/.vim/plugged')
+  Plug 'vim-jp/vimdoc-ja'
   Plug 'itchyny/lightline.vim'
   Plug 'Shougo/neomru.vim'
   Plug 'Shougo/neoyank.vim'
