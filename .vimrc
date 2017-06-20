@@ -116,9 +116,13 @@ nnoremap sH <C-w>H
 nnoremap sn gt
 nnoremap sp gT
 nnoremap sr <C-w>r
+nnoremap s+ <C-w>+
+nnoremap s- <C-w>-
 nnoremap s= <C-w>=
+nnoremap s> <C-w>>
+nnoremap s< <C-w><
 nnoremap sw <C-w>w
-nnoremap so <C-w>_<C-w>|
+nnoremap so <C-w>_<C-w><bar>
 nnoremap sO <C-w>=
 nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
