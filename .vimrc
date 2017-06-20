@@ -178,16 +178,26 @@ let g:quickrun_config = {
 autocmd FileType ruby nmap <Space>r <Plug>(quickrun)
 
 " vim-go
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <Space>gc :cclose<CR>
+autocmd FileType go set listchars=tab:->,eol:$
 autocmd FileType go nmap <Space>gr <Plug>(go-run)
 autocmd FileType go nmap <Space>gb <Plug>(go-build)
 autocmd FileType go nmap <Space>gt <Plug>(go-test)
+autocmd FileType go nmap <Space>gi <C-u>:GoImports<CR>
 let g:go_hightlight_functions = 1
 let g:go_hightlight_methods = 1
 let g:go_hightlight_structs = 1
 let g:go_hightlight_interfaces = 1
 let g:go_hightlight_operators = 1
 let g:go_hightlight_build_constraints = 1
+let g:go_hightlight_format_strings = 1
+let g:go_hightlight_generate_tags = 1
+let g:go_hightlight_extra_types = 1
 let g:go_fmt_command = "goimports"
+let g:go_list_type = "quickfix"
+let g:go_auto_type_info = 1
 
 " vimfiler
 noremap <Space>f :VimFilerCurrentDir -split -simple -winwidth=25 -no-quit<CR>
