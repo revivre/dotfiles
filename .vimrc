@@ -11,6 +11,7 @@ set wildmenu
 set linespace=0
 set title
 set cmdheight=2
+set diffopt=filler,vertical
 
 " colorscheme
 " ---------------------------------------
