@@ -254,6 +254,13 @@ let g:ref_open = 'split'
 let g:ref_refe_cmd = $HOME.'/.rbenv/shims/refe'
 let g:ref_refe_version = 2
 nmap ,rr :<C-U>Ref refe<Space>
+"vim-refを開いている間のキーマッピング
+autocmd FileType ref-refe call s:refe_my_settings()
+function! s:refe_my_settings()"{{{
+	"q, ESCでrefeを終了
+	nmap <buffer> <ESC> <C-w>c
+	nmap <buffer> q <C-w>c
+endfunction"}}}
 
 " unite.vim
 "インサートモードで開始
