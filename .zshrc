@@ -84,11 +84,40 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# dircolors
+# see http://qiita.com/yuyuchu3333/items/84fa4e051c3325098be3
+if [ -f ~/.dircolors ]; then
+    if type dircolors > /dev/null 2>&1; then
+        eval $(dircolors -b ~/.dircolors)
+    elif type gdircolors > /dev/null 2>&1; then
+        eval $(gdircolors -b ~/.dircolors)
+    fi
+fi
+if [ -n "$LS_COLORS" ]; then
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
+
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 # aliases
+if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
+# coreutils for Darwin
+# need to "brew install coreutils"
+  alias ls='gls -h --color=auto'
+  alias ll='gls -lh --color=auto'
+  alias la='gls -alh --color=auto'
+else
+  alias ls='ls -h'
+  alias ll='ls -l'
+  alias la='ls -al'
+fi
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
 # git
 alias gs='git status'
 alias gd='git diff'
