@@ -132,6 +132,12 @@ PATH="$HOME/.rbenv/shims:$PATH"
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 
+# for z command
+. `brew --prefix`/etc/profile.d/z.sh
+function precmd () {
+  z --add "$(pwd -P)"
+}
+
 function peco-src () {
     local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
